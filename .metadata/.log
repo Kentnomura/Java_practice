@@ -1185,3 +1185,160 @@ java.lang.IllegalStateException: Conflicting handlers: {[org.springframework.ide
 
 !ENTRY mergedoc.encoding 2 0 2022-07-20 14:14:55.953
 !MESSAGE リソース '/JavaWcp/src/ClassMethod02/ClassMethod02.java' が存在しません。
+
+!ENTRY org.eclipse.ui 4 4 2022-07-20 19:58:05.368
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1474/0x00000008011b4440@5f150b46, thread Worker-531: ClassMethod03 の起動 will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2022-07-20 19:58:05.368
+!MESSAGE Worker-531: ClassMethod03 の起動 thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-531: ClassMethod03 の起動
+	at java.management@11.0.9/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.9/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5050)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:245)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:197)
+	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.preLaunchCheck(AbstractJavaLaunchConfigurationDelegate.java:1026)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:770)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2022-07-20 19:58:05.371
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at java.base@11.0.9/java.util.HashMap.removeNode(HashMap.java:815)
+	at java.base@11.0.9/java.util.HashMap.remove(HashMap.java:794)
+	at java.base@11.0.9/java.util.Collections$SynchronizedMap.remove(Collections.java:2601)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.remove(EclipseContext.java:335)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:267)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:49)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:111)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.firePropertyChange(AbstractTextEditor.java:6339)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.lambda$1(AbstractTextEditor.java:445)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener$$Lambda$1366/0x0000000800f9ec40.run(Unknown Source)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:587)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementDirtyStateChanged(AbstractTextEditor.java:447)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.dirtyStateChanged(TextFileDocumentProvider.java:305)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$3.run(TextFileBufferManager.java:670)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireDirtyStateChanged(TextFileBufferManager.java:667)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:324)
+	at org.eclipse.jdt.internal.ui.javaeditor.DocumentAdapter.save(DocumentAdapter.java:516)
+	at org.eclipse.jdt.internal.core.CommitWorkingCopyOperation.executeOperation(CommitWorkingCopyOperation.java:127)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:811)
+	at org.eclipse.jdt.internal.core.CompilationUnit.commitWorkingCopy(CompilationUnit.java:404)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.commitWorkingCopy(CompilationUnitDocumentProvider.java:1418)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider$3.execute(CompilationUnitDocumentProvider.java:1495)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$DocumentProviderOperation.run(TextFileDocumentProvider.java:133)
+	at org.eclipse.ui.actions.WorkspaceModifyDelegatingOperation.execute(WorkspaceModifyDelegatingOperation.java:71)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$$Lambda$1365/0x0000000800f9e840.run(Unknown Source)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:76)
+	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:66)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.executeOperation(TextFileDocumentProvider.java:461)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.saveDocument(TextFileDocumentProvider.java:764)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.performSave(AbstractTextEditor.java:5007)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.performSave(CompilationUnitEditor.java:1264)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSave(CompilationUnitEditor.java:1318)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.doSave(AbstractTextEditor.java:7151)
+	at org.eclipse.ui.Saveable.doSave(Saveable.java:213)
+	at org.eclipse.ui.internal.SaveableHelper.doSaveModel(SaveableHelper.java:333)
+	at org.eclipse.ui.internal.SaveablesList.lambda$2(SaveablesList.java:850)
+	at org.eclipse.ui.internal.SaveablesList$$Lambda$1481/0x00000008011d8840.run(Unknown Source)
+	at org.eclipse.ui.internal.SaveableHelper.lambda$3(SaveableHelper.java:271)
+	at org.eclipse.ui.internal.SaveableHelper$$Lambda$1482/0x00000008011d8c40.run(Unknown Source)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:436)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$7(WorkbenchWindow.java:2353)
+	at org.eclipse.ui.internal.WorkbenchWindow$$Lambda$1138/0x0000000800ecfc40.run(Unknown Source)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2351)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:278)
+	at org.eclipse.ui.internal.SaveablesList.saveModels(SaveablesList.java:858)
+	at org.eclipse.ui.internal.SaveablesList.saveModels(SaveablesList.java:822)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3426)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1494)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1482)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1474/0x00000008011b4440.run(Unknown Source)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer$$Lambda$861/0x0000000800bc6440.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4181)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$254/0x000000080043fc40.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@11.0.9/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.9/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.9/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.9/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:33.961
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:33.963
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:33.969
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:33.969
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:34.035
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:34.036
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.543
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.544
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.546
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.546
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.577
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.577
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
