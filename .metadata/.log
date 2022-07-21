@@ -1342,3 +1342,93 @@ java.lang.IllegalStateException: Call stack for thread main
 
 !ENTRY mergedoc.encoding 2 0 2022-07-20 19:58:38.577
 !MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:29:08.702
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XlaUeeIv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:29:08.710
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.XlaUeeIv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:29:08.710
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:29:08.710
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XlaUeeIv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:55.965
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:55.981
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@1da85436[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=979)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:55.982
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.394
+!MESSAGE Boot LS startup time from start to initialized: 2370ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.521
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.rxSDupGSisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.532
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.533
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.536
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.536
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.rxSDupGS => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.542
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.555
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.556
+!MESSAGE buffering callback sts4.classpath.rxSDupGS JavaWcp false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.556
+!MESSAGE executing callback sts4.classpath.rxSDupGS 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-21 10:31:58.584
+!MESSAGE executing callback sts4.classpath.rxSDupGS SUCCESS [終了しました]
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:46.548
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:46.548
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:46.550
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:46.551
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:46.582
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:46.582
+!MESSAGE リソース '/JavaWcp/src/ClassMethod03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:53.340
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:53.340
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:53.342
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:53.342
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:53.376
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2022-07-21 10:33:53.376
+!MESSAGE リソース '/JavaWcp/src/Human03.java' が存在しません。
